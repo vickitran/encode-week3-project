@@ -7,9 +7,6 @@ const delegateVoting = async (mintAccounts:SignerWithAddress[], delegatee: Signe
   const myERC20TokensFactory = await ethers.getContractFactory('MyERC20Token');
 
   const myERC20TokenContract = await myERC20TokensFactory.attach(ERC20ContractAddress);
-  // connet to deployer
-  // await myERC20TokenContract.connect(deployer);
-  console.log(`attach ERC20 token contract address is : ${myERC20TokenContract.address}`);
 
   const votingAccount = []
   const tempAddress: string[] = []
