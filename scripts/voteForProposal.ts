@@ -18,10 +18,6 @@ const test = async () => {
     `${process.env.PRIVATE_KEY}`,
     provider
   );
-  // const votingPower = await tokenizedBallotContract.votingPower(
-  //   "0x92a8A20279B36eCF7dC77CAf2E5F7ca1106AD24E"
-  // );
-  // console.log(votingPower);
   const votingTx = await tokenizedBallotContract
     .connect(walletPrivateKey)
     .vote(0, ethers.utils.parseEther("1"), { gasLimit: 5000000 });
